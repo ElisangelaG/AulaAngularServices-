@@ -1,0 +1,21 @@
+<div>
+    <h1>DETALHE DA PESSOA</h1>
+    <p>nome: {{pessoa.name}}</p>
+    <p>idade: {{pessoa.idade}}</p>
+    <p>corOlhos: {{pessoa.corOlhos}}</p>
+    <p>sexo: {{pessoa.sexo}}</p>
+    <p>email: {{pessoa.email}}</p>
+    <button (click)='atualizarDados()'>Atualizar Dados</button>
+</div>
+<div>
+    <form id="invisible" style="display:none;">
+        <input type="text" placeholder="Nome" ref-nome>
+        <input type="number" placeholder="Idade" ref-idade>
+        <input type="text" placeholder="corOlhos" ref-corOlhos>
+        <input type="text" placeholder="sexo" ref-sexo>
+        <input type="text" placeholder="email" ref-email>
+
+    </form>
+    <button (click)='confirmarDados(nome.value, idade.value, corOlhos.value, sexo.value, email.value)'>Confirmar</button>
+
+</div>
